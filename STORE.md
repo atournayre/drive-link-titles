@@ -40,25 +40,27 @@ Display the name and type of Google Docs, Sheets, Slides, Forms and Drive docume
 web pages, so users can tell documents apart without opening them.
 
 **Justification `storage`** :
-Cache local des titres (6 h) et liste des sites exclus définie par l'utilisateur.
+```text
+Stores (1) a local cache of document titles for 6 hours, to avoid repeating requests, and (2) the user's list of excluded sites set in the options page. Nothing else is stored.
+```
 
-**Justification host permissions (`https://docs.google.com/*`, `https://drive.google.com/*`)** :
-Le service worker lit le `<title>` du document avec la session Google de l'utilisateur pour obtenir son nom.
-Ce sont les seuls hôtes contactés.
+**Justification host permissions** (champ « Autorisation d'accès à l'hôte ») :
+```text
+Host permissions https://docs.google.com/* and https://drive.google.com/*: the background service worker fetches the page of a linked document to read its <title> (the document name), using the user's existing Google session. These are the only hosts the extension contacts.
 
-**Justification content script sur `http(s)://*/*`** :
-Un lien Google Docs/Drive peut apparaître sur n'importe quel site (tickets, chats, wikis, mails). Le script
-n'analyse que les liens vers docs.google.com et drive.google.com. Les sites peuvent être exclus dans les options.
+Content script on http(s)://*/*: a Google Docs/Drive link can appear on any site (issue trackers, chat apps, wikis, webmail), so the script must run on all sites. It only looks at links pointing to docs.google.com or drive.google.com, and replaces them with an icon and the document name. Users can disable it on specific sites in the options page.
+```
 
 **Remote code** : Non.
 
-**Données collectées** : contenu de sites web (titre des documents) — traité localement, jamais transmis hors
-de Google. Pas d'informations d'authentification collectées (cookies envoyés par le navigateur à Google,
-jamais lus).
+**Données collectées** : cocher « Contenu du site Web » uniquement (liens lus dans les pages, titres mis en cache en local).
 
-**Certifications** : cocher les trois (pas de vente, pas d'usage hors finalité, pas de crédit/prêt).
+**Certifications** : cocher les trois.
 
-**Privacy policy URL** : URL publique de `PRIVACY.md` (le repo étant privé, voir plus bas).
+**Privacy policy URL** :
+```text
+https://github.com/atournayre/drive-link-titles/blob/main/PRIVACY.md
+```
 
 ## Distribution
 
