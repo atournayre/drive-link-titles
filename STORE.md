@@ -8,29 +8,36 @@ Copier-coller dans le Developer Dashboard. Ne fait pas partie du zip.
 
 **Catégorie** : Productivité (à vérifier dans la liste du dashboard)
 
-**Langue** : Français
+**Langue** : English
 
-**Description détaillée** :
+**Description détaillée** (à coller telle quelle) :
 
-Les liens Google Docs, Sheets, Slides, Forms et Drive affichent un identifiant illisible : impossible de savoir
-de quel document il s'agit sans l'ouvrir. Drive Link Titles les remplace par une icône et le nom du document,
-comme les puces de Google Chat.
+```text
+Replaces Google Docs, Sheets, Slides, Forms and Drive links with an icon and the document name, on any website.
 
-- Fonctionne sur tous les sites (GitHub, Discord, Notion, wiki, webmail…)
-- Onglet et plage d'un Google Sheets affichés en discret, URL complète au survol
-- Seuls les liens « nus » sont remplacés : un lien écrit à la main avec son propre texte n'est jamais modifié
-- Liste de sites exclus dans les options
-- Aucune donnée envoyée à un tiers : le titre est lu directement chez Google avec ta session, puis gardé 6 h
-  dans le cache local
-- Document inaccessible (non connecté, pas les droits) : le lien reste tel quel
+Ever received a link like docs.google.com/spreadsheets/d/1aBcD3fGh1JkLmN… and had to open it just to know what it is? Drive Link Titles shows the document name instead, like the smart chips in Google Chat.
 
-Limites : compte Google par défaut uniquement.
+Features
+• Works on any website: GitHub, Discord, Notion, wikis, webmail…
+• Icon by type: Docs, Sheets, Slides, Forms, Drive file or folder
+• For Sheets, the tab (gid) and cell range are shown discreetly; the full URL stays in the tooltip
+• Only bare links are replaced: a link you wrote with your own text is never modified
+• Exclusion list in the options to disable the extension on specific sites
+• Inaccessible document (signed out, no permission): the link stays as is
+
+Privacy
+• The title is read directly from Google with your existing Google session, and cached locally for 6 hours
+• Nothing is sent to the developer or to any third party; the only requests go to docs.google.com and drive.google.com
+• No analytics, no ads, no remote code
+
+Limitation: uses your default Google account.
+```
 
 ## Privacy tab
 
 **Single purpose** :
-Afficher le nom et le type des documents Google Docs / Sheets / Slides / Forms / Drive à la place de leurs URL
-dans les pages web.
+Display the name and type of Google Docs, Sheets, Slides, Forms and Drive documents in place of their raw URLs in
+web pages, so users can tell documents apart without opening them.
 
 **Justification `storage`** :
 Cache local des titres (6 h) et liste des sites exclus définie par l'utilisateur.
