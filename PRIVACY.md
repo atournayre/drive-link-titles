@@ -1,42 +1,41 @@
-# Politique de confidentialité — Drive Link Titles
+# Privacy Policy — Drive Link Titles
 
-Dernière mise à jour : 2026-11-23
+Last updated: 2026-11-23
 
-Drive Link Titles remplace, dans les pages web, les liens Google Docs / Sheets / Slides / Forms / Drive
-par une icône et le nom du document.
+Drive Link Titles replaces Google Docs / Sheets / Slides / Forms / Drive links in web pages with an icon
+and the document name.
 
-## Ce que l'extension traite
+## What the extension processes
 
-- **Liens de la page** : le script lit les liens (`<a>`) vers `docs.google.com` et `drive.google.com`
-  présents dans les pages que tu visites. Le reste de la page n'est ni lu ni enregistré.
-- **Titre du document** : pour chaque lien reconnu, l'extension demande la page correspondante à Google
-  (`docs.google.com` ou `drive.google.com`) avec ta session Google existante (cookies envoyés par le
-  navigateur à Google, jamais lus par l'extension), et ne garde que le contenu de la balise `<title>`.
-- **Cache local** : les titres trouvés sont conservés 6 heures dans `chrome.storage.local`, sur ton
-  appareil, pour éviter de refaire les requêtes.
-- **Réglages** : la liste de sites exclus est enregistrée dans `chrome.storage.sync` (synchronisée par
-  Chrome avec ton compte Google si la synchronisation est activée).
+- **Links in the page**: the content script reads links (`<a>`) pointing to `docs.google.com` and
+  `drive.google.com` in the pages you visit. The rest of the page is neither read nor stored.
+- **Document title**: for each recognized link, the extension requests the matching page from Google
+  (`docs.google.com` or `drive.google.com`) using your existing Google session (cookies are sent by the
+  browser to Google, and are never read by the extension), and keeps only the content of the `<title>` tag.
+- **Local cache**: titles found are kept for 6 hours in `chrome.storage.local`, on your device, to avoid
+  repeating requests.
+- **Settings**: the list of excluded sites is saved in `chrome.storage.sync` (synced by Chrome with your
+  Google account if sync is enabled).
 
-## Ce qui n'est jamais fait
+## What is never done
 
-- Aucune donnée n'est envoyée au développeur ni à un tiers : les seules requêtes réseau de l'extension
-  vont à `docs.google.com` et `drive.google.com`.
-- Aucun identifiant, statistique d'usage, publicité ni outil d'analyse.
-- Aucune donnée n'est vendue, partagée ou utilisée à une autre fin que d'afficher le nom du document.
-- Aucun code distant n'est chargé ni exécuté.
-- Les cookies et identifiants Google ne sont pas lus, copiés ni stockés par l'extension.
+- No data is sent to the developer or to any third party: the only network requests made by the extension
+  go to `docs.google.com` and `drive.google.com`.
+- No identifiers, usage statistics, advertising or analytics tools.
+- No data is sold, shared or used for any purpose other than displaying the document name.
+- No remote code is loaded or executed.
+- Google cookies and credentials are not read, copied or stored by the extension.
 
 ## Limited Use
 
-L'utilisation des informations obtenues par l'extension respecte la politique « Limited Use » du
-Chrome Web Store : elles servent uniquement à fournir la fonction décrite (afficher le nom des
-documents), ne sont transférées à personne, ne servent pas à de la publicité et ne sont pas lues par
-des humains.
+The use of information obtained by the extension complies with the Chrome Web Store "Limited Use"
+policy: it is used only to provide the described feature (displaying document names), is not transferred
+to anyone, is not used for advertising and is not read by humans.
 
-## Contrôle
+## Your control
 
-- Liste de sites exclus : page d'options de l'extension.
-- Suppression des données : désinstaller l'extension supprime le cache et les réglages locaux.
+- Excluded sites list: the extension's options page.
+- Data removal: uninstalling the extension deletes the cache and the local settings.
 
 ## Contact
 
