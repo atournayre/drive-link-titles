@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drive Link Titles – Options</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font: 14px/1.5 system-ui, sans-serif; max-width: 40rem; margin: 2rem auto; padding: 0 1rem; }
+    h1 { font-size: 1.3rem; }
+    textarea { width: 100%; box-sizing: border-box; font: 13px/1.5 ui-monospace, monospace; padding: 0.5rem; }
+    .actions { display: flex; gap: 0.5rem; align-items: center; margin-top: 0.75rem; }
+    #status { opacity: 0.7; }
+    code { font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <h1>Drive Link Titles</h1>
+  <p>
+    L'extension tourne sur tous les sites. Liste ici ceux à ignorer, un domaine par ligne.
+    <code>example.com</code> exclut aussi ses sous-domaines. Les lignes qui commencent par <code>#</code> sont des commentaires.
+    Les changements s'appliquent aux pages ouvertes après l'enregistrement.
+  </p>
+  <textarea id="excluded" rows="12" spellcheck="false" aria-label="Sites exclus"></textarea>
+  <div class="actions">
+    <button id="save" type="button">Enregistrer</button>
+    <button id="reset" type="button">Valeurs par défaut</button>
+    <span id="status" role="status"></span>
+  </div>
+  <script src="lib.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
